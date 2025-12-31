@@ -1,0 +1,83 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/schema.json",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "beforeDevCommand": "npm run dev",
+    "devPath": "http://localhost:5173",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "Sharif Aero",
+    "version": "1.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "fs": {
+        "all": true,
+        "scope": ["$HOME/**", "$DESKTOP/**", "$DOCUMENT/**", "$DOWNLOAD/**", "$TEMP/**"]
+      },
+      "dialog": {
+        "all": true,
+        "save": true
+      },
+      "path": {
+        "all": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "2024 Sharif University",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ],
+      "identifier": "com.sharif.aero",
+      "longDescription": "Sharif Aero - Advanced Aerodynamic Analysis Software based on USAF Digital DATCOM",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null
+      },
+      "resources": [],
+      "shortDescription": "Sharif Aero - Aerodynamic Analysis",
+      "targets": "all",
+      "windows": {
+        "certificateThumbprint": null,
+        "digestAlgorithm": "sha256",
+        "timestampUrl": ""
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": false
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 800,
+        "width": 1200,
+        "minHeight": 600,
+        "minWidth": 900,
+        "resizable": true,
+        "title": "Sharif Aero - Aerodynamic Analysis"
+      }
+    ]
+  }
+}
